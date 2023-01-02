@@ -80,10 +80,10 @@ body {
     position: relative;
 }
 .play-back{
-
+    cursor: pointer;
 }
 .play-foward{
-
+    cursor: pointer;
 }
 /* Custom input tham khao tren css-tricks */
 .range{
