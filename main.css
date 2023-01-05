@@ -130,7 +130,7 @@ body {
     padding: 12px;
   }
   
-  .song {
+  .muzik {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
@@ -140,21 +140,21 @@ body {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   
-  .song.active {
+  .muzik.active {
     background-color: var(--primary-color);
   }
   
-  .song:active {
+  .muzik:active {
     opacity: 0.8;
   }
   
-  .song.active .option,
-  .song.active .author,
-  .song.active .title {
+  .muzik.active .option,
+  .muzik.active .author,
+  .muzik.active .title {
     color: #fff;
   }
   
-  .song .thumb {
+  .muzik .thumb {
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -162,22 +162,22 @@ body {
     margin: 0 8px;
   }
   
-  .song .body {
+  .muzik .body {
     flex: 1;
     padding: 0 16px;
   }
   
-  .song .title {
+  .muzik .title {
     font-size: 18px;
     color: var(--text-color);
   }
   
-  .song .artist {
+  .muzik .artist {
     font-size: 12px;
     color: #999;
   }
   
-  .song .option {
+  .muzik .option {
     padding: 16px 8px;
     color: #999;
     font-size: 18px;

@@ -11,8 +11,9 @@ const durationTime = document.querySelector(".duration");
 const remainingTime = document.querySelector(".remaining");
 const rangeBar = document.querySelector(".range");
 const playlist=document.querySelector(".playlist");
+const muzik=document.querySelector(".muzik")
 let isRepeat=false;
-let indexSong=0;
+var indexSong=0;
 let timer;
 let repeatCount=0
 let isPlaying=true;
@@ -45,6 +46,7 @@ const musics=[
     },
 ]
 const app={
+    currentIndex:indexSong,
     songs:[
         {
             name: "I.F.L.Y",
@@ -75,8 +77,8 @@ const app={
     render: function () {
     const htmls = this.songs.map((song, index) => {
       return `
-                        <div class="song ${
-                          index === indexSong ? "active" : ""
+                        <div class="muzik ${
+                          index === this.currentIndex ? "active" : ""
                         }" data-index="${index}">
                             <div class="thumb">
                                 <img src="./assets/img/${[song.image]}" alt="">
@@ -93,7 +95,7 @@ const app={
   handleEvent:function(){
     const _this=this;
     playlist.onclick = function (e) {
-        const songNode = e.target.closest(".song:not(.active)");
+        const songNode = e.target.closest(".muzik:not(.active)");
   
         if (songNode) {
           // Xử lý khi click vào song
@@ -118,6 +120,7 @@ nextBtn && nextBtn.addEventListener("click",function(){
     else{
         changeSong(1);
     }
+    render();
 });
 prevBtn && prevBtn.addEventListener("click",function(){
     if (isRandom){
@@ -126,6 +129,7 @@ prevBtn && prevBtn.addEventListener("click",function(){
     else{
         changeSong(0);
     }
+    app.render();
 });
 function changeSong(act){
     if (act==1){
