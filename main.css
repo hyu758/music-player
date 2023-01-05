@@ -114,3 +114,6 @@ body {
 .play-repeat{
     cursor: pointer;
 }
+.active{
+    color: red;
+}

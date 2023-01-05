@@ -14,6 +14,8 @@ let isRepeat=false;
 let indexSong=0;
 let timer;
 let repeatCount=0
+let isPlaying=true;
+let isRandom=false;
 const musics=[
     {
         name: "I.F.L.Y",
@@ -43,10 +45,20 @@ const musics=[
 ]
 
 nextBtn && nextBtn.addEventListener("click",function(){
-    changeSong(1)
+    if (isRandom){
+        playRandomSong();
+    }
+    else{
+        changeSong(1);
+    }
 });
 prevBtn && prevBtn.addEventListener("click",function(){
-    changeSong(0)
+    if (isRandom){
+        playRandomSong()
+    }
+    else{
+        changeSong(0);
+    }
 });
 function changeSong(act){
     if (act==1){
@@ -66,28 +78,37 @@ function changeSong(act){
     loadMusic(indexSong);
     playPause();
 }
-randomBtn.addEventListener("click",function(){
-    if (!isRepeat){
-        isRepeat=false;
-        repeatBtn.removeAttribute("style");
+// phat random
+randomBtn.onclick = function(e){
+    if (isRandom){
+        randomBtn.classList.remove("active");
+        isRandom=false;
     }
     else{
-        isRepeat=true;
-        repeatBtn.style.color="#00FF00";
-    }
-})
-song.addEventListener("ended", endSong);
-function endSong(){
-    repeatCount++;
-    if (isRepeat && repeatCount===1){
-        isPlaying=true;
-        playPause();
-    }
-    else{
-        changeSong(1);
+        randomBtn.classList.add("active");
+        isRandom=true;
     }
 }
-let isPlaying=true;
+// lap lai bai hat
+repeatBtn.onclick = function(e){
+    if (isRepeat){
+        repeatBtn.classList.remove("active");
+        isRepeat=false;
+    }
+    else{
+        repeatBtn.classList.add("active");
+        isRepeat=true;
+    }
+}
+song.addEventListener("ended", endSong);
+function endSong(){
+    if (isRepeat){
+        song.play()
+    }
+    else{
+        nextBtn.click()
+    }
+}
 playBtn.addEventListener("click",playPause);
 function playPause() {
     if (isPlaying){
@@ -103,6 +124,17 @@ function playPause() {
         clearInterval(timer);
     }
 }
+function playRandomSong(){
+    let randomIndex
+    do {
+        randomIndex=Math.floor(Math.random()*musics.length)
+    }while (randomIndex===indexSong);
+    indexSong=randomIndex;
+    loadMusic();
+    isPlaying=true;
+    playPause()
+}
+
 function displayTimer() {
     const { duration, currentTime } = song;
     rangeBar.max = duration;
@@ -114,6 +146,7 @@ function displayTimer() {
       durationTime.textContent = formatTimer(duration);
     }
   }
+// thoi gian
   function formatTimer(number) {
     const minutes = Math.floor(number / 60);
     const seconds = Math.floor(number - minutes * 60);
@@ -121,6 +154,7 @@ function displayTimer() {
       seconds < 10 ? "0" + seconds : seconds
     }`;
   }
+//khi tua
   rangeBar.addEventListener("change", handleChangeBar);
   function handleChangeBar() {
     song.currentTime = rangeBar.value;
