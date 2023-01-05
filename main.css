@@ -108,3 +108,9 @@ body {
 .range{
     margin-bottom: 30px;
 }
+.play-random{
+    cursor: pointer;
+}
+.play-repeat{
+    cursor: pointer;
+}
