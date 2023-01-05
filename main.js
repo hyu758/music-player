@@ -10,6 +10,7 @@ const randomBtn=document.querySelector(".play-random");
 const durationTime = document.querySelector(".duration");
 const remainingTime = document.querySelector(".remaining");
 const rangeBar = document.querySelector(".range");
+const playlist=document.querySelector(".playlist");
 let isRepeat=false;
 let indexSong=0;
 let timer;
@@ -43,7 +44,73 @@ const musics=[
         image:"4.jpg"
     },
 ]
-
+const app={
+    songs:[
+        {
+            name: "I.F.L.Y",
+            artist: "Bazzy",
+            file:"ifly.mp3",
+            image:"1.jpg"
+        },
+        {
+            name: "I Do",
+            artist: "911",
+            file:"I Do.mp3",
+            image:"2.jpg"
+        },
+        {
+            name: "Night Changes",
+            artist: "One Direction",
+            file:"nightchanges.mp3",
+            image:"3.jpg"
+    
+        },
+        {
+            name: "Heartbreak Anniversary",
+            artist: "Giveon",
+            file:"heartbreakanni.mp3",
+            image:"4.jpg"
+        },
+    ],
+    render: function () {
+    const htmls = this.songs.map((song, index) => {
+      return `
+                        <div class="song ${
+                          index === indexSong ? "active" : ""
+                        }" data-index="${index}">
+                            <div class="thumb">
+                                <img src="./assets/img/${[song.image]}" alt="">
+                            </div>
+                            <div class="body">
+                                <h3 class="title">${song.name}</h3>
+                                <p class="artist">${song.artist}</p>
+                            </div>
+                        </div>
+                    `;
+    });
+    playlist.innerHTML = htmls.join("");
+  },
+  handleEvent:function(){
+    const _this=this;
+    playlist.onclick = function (e) {
+        const songNode = e.target.closest(".song:not(.active)");
+  
+        if (songNode) {
+          // Xử lý khi click vào song
+          if (songNode) {
+            _this.indexSong = Number(songNode.dataset.index);
+            _this.loadMusic(indexSong);
+            _this.render();
+            song.play();
+          }
+        }
+      };
+  },
+  start:function(){
+    this.render()
+  }
+}
+app.start()
 nextBtn && nextBtn.addEventListener("click",function(){
     if (isRandom){
         playRandomSong();
