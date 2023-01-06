@@ -45,6 +45,7 @@ const musics=[
         image:"4.jpg"
     },
 ]
+// active khi chuyen bai
 function render(){
     const htmls = musics.map((song, index) => {
         return `
@@ -65,7 +66,23 @@ function render(){
                       `;
       });
       playlist.innerHTML = htmls.join("");
-    }
+    };
+function activeSong(){
+    playlist.onclick = function (e) {
+        const songNode = e.target.closest(".muzik:not(.active)");
+  
+        if (songNode) {
+          // Xử lý khi click vào song
+          if (songNode) {
+
+            indexSong = Number(songNode.dataset.index);
+            loadMusic();
+            render();
+            song.play();
+          }
+        }
+      };
+}
 nextBtn && nextBtn.addEventListener("click",function(){
     if (isRandom){
         playRandomSong();
@@ -193,3 +210,4 @@ function loadMusic(indexNum){
 displayTimer();
 loadMusic(indexSong);
 render();
+activeSong();
