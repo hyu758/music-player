@@ -36,12 +36,17 @@ body {
   
 }
 .music{
-    max-width: 500px;
-    border-radius: 12px;
-    margin: 0 auto;
-    background-color: white;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 16px 16px 28px;
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 16px 14px;
+  background-color: #fff;
+  top: 20px;
+  width: 100%;
+  max-width: 480px;
+  border-bottom: 1px solid #ebebeb;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border-radius:12px ;
 
 }
 .music-thumbnail{
@@ -199,3 +204,6 @@ body {
     color: #999;
     font-size: 18px;
   }
+.list {
+  cursor: pointer;
+}
