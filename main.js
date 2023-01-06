@@ -45,74 +45,27 @@ const musics=[
         image:"4.jpg"
     },
 ]
-const app={
-    currentIndex:indexSong,
-    songs:[
-        {
-            name: "I.F.L.Y",
-            artist: "Bazzy",
-            file:"ifly.mp3",
-            image:"1.jpg"
-        },
-        {
-            name: "I Do",
-            artist: "911",
-            file:"I Do.mp3",
-            image:"2.jpg"
-        },
-        {
-            name: "Night Changes",
-            artist: "One Direction",
-            file:"nightchanges.mp3",
-            image:"3.jpg"
-    
-        },
-        {
-            name: "Heartbreak Anniversary",
-            artist: "Giveon",
-            file:"heartbreakanni.mp3",
-            image:"4.jpg"
-        },
-    ],
-    render: function () {
-    const htmls = this.songs.map((song, index) => {
-      return `
-                        <div class="muzik ${
-                          index === this.currentIndex ? "active" : ""
-                        }" data-index="${index}">
-                            <div class="thumb">
+function render(){
+    const htmls = musics.map((song, index) => {
+        return `
+                          <div class="muzik ${
+                            index === this.indexSong ? "active" : ""
+                          }" data-index="${index}">
+                              <div class="thumb">
                                 <img src="./assets/img/${[song.image]}" alt="">
-                            </div>
-                            <div class="body">
-                                <h3 class="title">${song.name}</h3>
-                                <p class="artist">${song.artist}</p>
-                            </div>
-                        </div>
-                    `;
-    });
-    playlist.innerHTML = htmls.join("");
-  },
-  handleEvent:function(){
-    const _this=this;
-    playlist.onclick = function (e) {
-        const songNode = e.target.closest(".muzik:not(.active)");
-  
-        if (songNode) {
-          // Xử lý khi click vào song
-          if (songNode) {
-            _this.indexSong = Number(songNode.dataset.index);
-            _this.loadMusic(indexSong);
-            _this.render();
-            song.play();
-          }
-        }
-      };
-  },
-  start:function(){
-    this.render()
-  }
-}
-app.start()
+                              </div>
+                              <div class="body">
+                                  <h3 class="title">${song.name}</h3>
+                                  <p class="author">${song.artist}</p>
+                              </div>
+                              <div class="option">
+                                  <i class="fas fa-ellipsis-h"></i>
+                              </div>
+                          </div>
+                      `;
+      });
+      playlist.innerHTML = htmls.join("");
+    }
 nextBtn && nextBtn.addEventListener("click",function(){
     if (isRandom){
         playRandomSong();
@@ -129,7 +82,7 @@ prevBtn && prevBtn.addEventListener("click",function(){
     else{
         changeSong(0);
     }
-    app.render();
+    render();
 });
 function changeSong(act){
     if (act==1){
@@ -239,3 +192,4 @@ function loadMusic(indexNum){
 }
 displayTimer();
 loadMusic(indexSong);
+render();
