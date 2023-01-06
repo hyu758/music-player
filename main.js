@@ -80,8 +80,9 @@ function activeSong(){
             indexSong = Number(songNode.dataset.index);
             loadMusic();
             render();
-            playPause();
             isPlaying=true;
+            playPause();
+            
           }
         }
       };
