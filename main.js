@@ -18,6 +18,7 @@ let timer;
 let repeatCount=0
 let isPlaying=true;
 let isRandom=false;
+// List nhac
 const musics=[
     {
         name: "I.F.L.Y",
@@ -67,9 +68,10 @@ function render(){
       });
       playlist.innerHTML = htmls.join("");
     };
+// Xu li khi click vao bai hat trong playlist
 function activeSong(){
     playlist.onclick = function (e) {
-        const songNode = e.target.closest(".muzik:not(.active)");
+        const songNode = e.target.closest(".muzik:not(.active)");//Khi khong co active
   
         if (songNode) {
           // Xử lý khi click vào song
@@ -78,11 +80,13 @@ function activeSong(){
             indexSong = Number(songNode.dataset.index);
             loadMusic();
             render();
-            song.play();
+            playPause();
+            isPlaying=true;
           }
         }
       };
 }
+// Lang nghe khi tua di hoac tua nguoc
 nextBtn && nextBtn.addEventListener("click",function(){
     if (isRandom){
         playRandomSong();
@@ -101,6 +105,7 @@ prevBtn && prevBtn.addEventListener("click",function(){
     }
     render();
 });
+// Xu li khi chuyen bai
 function changeSong(act){
     if (act==1){
         indexSong++;
@@ -141,6 +146,7 @@ repeatBtn.onclick = function(e){
         isRepeat=true;
     }
 }
+// Khi ket thuc bai hat
 song.addEventListener("ended", endSong);
 function endSong(){
     if (isRepeat){
@@ -150,6 +156,7 @@ function endSong(){
         nextBtn.click()
     }
 }
+// Khi nhan tam dung hoac bat dau bai nhac
 playBtn.addEventListener("click",playPause);
 function playPause() {
     if (isPlaying){
@@ -165,6 +172,7 @@ function playPause() {
         clearInterval(timer);
     }
 }
+// Phat nhac random
 function playRandomSong(){
     let randomIndex
     do {
@@ -200,6 +208,7 @@ function displayTimer() {
   function handleChangeBar() {
     song.currentTime = rangeBar.value;
   }
+// Load music
 function loadMusic(indexNum){
     song.setAttribute("src",`./assets/music/${musics[indexSong].file}`);
     songName.textContent=musics[indexSong].name;
@@ -207,6 +216,7 @@ function loadMusic(indexNum){
     songImg.setAttribute("src",`./assets/img/${musics[indexSong].image}`);
 
 }
+//Goi ham
 displayTimer();
 loadMusic(indexSong);
 render();
