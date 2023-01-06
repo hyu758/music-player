@@ -137,7 +137,14 @@ body {
 .playlist {
     margin-top: 40px;
     padding: 12px;
-  }
+    display: none;
+}
+.playlist.open{
+  display: block;
+}
+.list.active{
+  color: red;
+}
   
   .muzik {
     display: flex;

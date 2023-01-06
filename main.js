@@ -13,6 +13,7 @@ const rangeBar = document.querySelector(".range");
 const playlist=document.querySelector(".playlist");
 const muzik=document.querySelector(".muzik")
 const musicThumbnail=document.querySelector(".music-thumbnail");
+const list=document.querySelector(".list");
 let isRepeat=false;
 var indexSong=0;
 let timer;
@@ -46,6 +47,18 @@ const musics=[
         file:"heartbreakanni.mp3",
         image:"4.jpg"
     },
+    {
+        name: "1402",
+        artist: "NHÂN x HIẾU (prod. by wavytrbl)",
+        file: "1402.mp3",
+        image:"5.jpg"
+    },
+    {
+        name: "Seasons",
+        artist: "Rival x Cadmium",
+        file: "seasons.mp3",
+        image:"6.jpg"
+    }
 ]
 // active khi chuyen bai
 function render(){
@@ -228,6 +241,18 @@ const thumbnailAnimate=musicThumbnail.animate([
     iterations: Infinity
 });
 thumbnailAnimate.pause();
+//open playlist
+list.onclick=function(e){
+    const check=e.target.closest(".list:not(.active)");
+    if (check){
+        list.classList.add("active");
+        playlist.classList.add("open");
+    }
+    else{
+        list.classList.remove("active");
+        playlist.classList.remove("open");
+    }
+}
 //Goi ham
 displayTimer();
 loadMusic(indexSong);
