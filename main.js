@@ -12,6 +12,7 @@ const remainingTime = document.querySelector(".remaining");
 const rangeBar = document.querySelector(".range");
 const playlist=document.querySelector(".playlist");
 const muzik=document.querySelector(".muzik")
+const musicThumbnail=document.querySelector(".music-thumbnail");
 let isRepeat=false;
 var indexSong=0;
 let timer;
@@ -165,12 +166,14 @@ function playPause() {
         playBtn.innerHTML='<ion-icon name="pause-outline"></ion-icon>'
         isPlaying=false;
         timer = setInterval(displayTimer, 500);
+        thumbnailAnimate.play();
     }
     else{
         song.pause();
         playBtn.innerHTML='<ion-icon name="play-outline""></ion-icon>'
         isPlaying= true;
         clearInterval(timer);
+        thumbnailAnimate.pause();
     }
 }
 // Phat nhac random
@@ -216,7 +219,15 @@ function loadMusic(indexNum){
     artistName.textContent=musics[indexSong].artist;
     songImg.setAttribute("src",`./assets/img/${musics[indexSong].image}`);
 
-}
+};
+// Image Rotate
+const thumbnailAnimate=musicThumbnail.animate([
+    { transform: 'rotate(360deg)'}
+],{
+    duration:10000,
+    iterations: Infinity
+});
+thumbnailAnimate.pause();
 //Goi ham
 displayTimer();
 loadMusic(indexSong);

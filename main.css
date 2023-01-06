@@ -9,7 +9,7 @@
   font: inherit;
 }
 :root {
-    --primary-color: #ec1f55;
+    --primary-color: #FF3366;
     --text-color: #333;
   }
 img{
@@ -26,6 +26,14 @@ body {
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   padding:20px;
+}
+.status{
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #FF3366;
+  font-weight: 600;
+  
 }
 .music{
     max-width: 500px;
@@ -46,6 +54,7 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .music-name{
     font-size: 20px;
@@ -182,4 +191,3 @@ body {
     color: #999;
     font-size: 18px;
   }
-  
