@@ -12,6 +12,11 @@
     --primary-color: #FF3366;
     --text-color: #333;
   }
+.download{
+  text-decoration: none;
+  color: black;
+  margin-top:6px;
+}
 img{
     display: block;
     max-width: 100%;
@@ -84,6 +89,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0 20px;
+    font-size: 20px;
 }
 .play-btn{
     width: 50px;

@@ -14,6 +14,7 @@ const playlist=document.querySelector(".playlist");
 const muzik=document.querySelector(".muzik")
 const musicThumbnail=document.querySelector(".music-thumbnail");
 const list=document.querySelector(".list");
+const songDownload=document.querySelector(".download");
 let isRepeat=false;
 var indexSong=0;
 let timer;
@@ -26,38 +27,44 @@ const musics=[
         name: "I.F.L.Y",
         artist: "Bazzy",
         file:"ifly.mp3",
-        image:"1.jpg"
+        image:"1.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1LYUguFXKBKz9gzH-mSjDk5kXIikfv7XB"
     },
     {
         name: "I Do",
         artist: "911",
         file:"I Do.mp3",
-        image:"2.jpg"
+        image:"2.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1VdO3PxmWjlFbIzR5hi3GbPwQdBZ1j7wl"
     },
     {
         name: "Night Changes",
         artist: "One Direction",
         file:"nightchanges.mp3",
-        image:"3.jpg"
+        image:"3.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1rwlBOaRVqSpdhdi008P-zuY3BaOjAk76"
 
     },
     {
         name: "Heartbreak Anniversary",
         artist: "Giveon",
         file:"heartbreakanni.mp3",
-        image:"4.jpg"
+        image:"4.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1-P2FTPFzdbTPSf5yykiC_D5T3hBxGGbH"
     },
     {
         name: "1402",
         artist: "NHÂN x HIẾU (prod. by wavytrbl)",
         file: "1402.mp3",
-        image:"5.jpg"
+        image:"5.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1Ukv0erM0n7CqKImr64Bg9qY9s0yeoBRL"
     },
     {
         name: "Seasons",
         artist: "Rival x Cadmium",
         file: "seasons.mp3",
-        image:"6.jpg"
+        image:"6.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1m10xyaszKKGS0hsGRZKhbLgPUeSHV3rN"
     }
 ]
 // active khi chuyen bai
@@ -231,7 +238,7 @@ function loadMusic(indexNum){
     songName.textContent=musics[indexSong].name;
     artistName.textContent=musics[indexSong].artist;
     songImg.setAttribute("src",`./assets/img/${musics[indexSong].image}`);
-
+    songDownload.setAttribute("href",`${[musics[indexSong].download]}`)
 };
 // Image Rotate
 const thumbnailAnimate=musicThumbnail.animate([
