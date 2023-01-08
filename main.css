@@ -61,11 +61,12 @@
 }
 .content .artist-item{
     display: flex;
-    width: calc(25% - 30px);
-    margin-left: 30px;
+    width: 100%;
+    margin-bottom: 50px;
     background-color: rgb(6 188 39);
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .content .artist-item img{
     width: 100px;
@@ -95,11 +96,10 @@
     margin: auto;
 
 }
-.artist-item .play-btn:hover{
-    width: 52px;
-    height: 52px;
-    font-size: 25px;
-}
 .artist-item a{
     margin: 25px;
+}
+.row{
+  margin-left: 30px;
+  width: 50%;
 }

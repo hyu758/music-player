@@ -24,47 +24,40 @@ let isRandom=false;
 // List nhac
 const musics=[
     {
-        name: "I.F.L.Y",
-        artist: "Bazzy",
-        file:"ifly.mp3",
-        image:"1.jpg",
-        download:"https://drive.google.com/uc?export=download&id=1LYUguFXKBKz9gzH-mSjDk5kXIikfv7XB"
+        name: "CHÚNG TA CỦA HIỆN TẠI",
+        artist: "SƠN TÙNG M-TP",
+        file:"chungtacuahientai.mp3",
+        image:"chungtacuahientai.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1E_bl6tC3uEI_vfBQSAwaorp_Wu6T9vKq"
     },
     {
-        name: "I Do",
-        artist: "911",
-        file:"I Do.mp3",
-        image:"2.jpg",
-        download:"https://drive.google.com/uc?export=download&id=1VdO3PxmWjlFbIzR5hi3GbPwQdBZ1j7wl"
+        name: "MUỘN RỒI MÀ SAO CÒN",
+        artist: "SƠN TÙNG M-TP",
+        file:"muonroimasaocon.mp3",
+        image:"muonroimasaocon.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1Jr0L18oo3iV6BOfQB0RqewLto7wneudE"
     },
     {
-        name: "Night Changes",
-        artist: "One Direction",
-        file:"nightchanges.mp3",
-        image:"3.jpg",
-        download:"https://drive.google.com/uc?export=download&id=1rwlBOaRVqSpdhdi008P-zuY3BaOjAk76"
+        name: "LẠC TRÔI",
+        artist: "SƠN TÙNG M-TP",
+        file:"lactroi.mp3",
+        image:"lactroi.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1vwbUUb06kK1MiORaGdKX15Dl51NJM7Ty"
 
     },
     {
-        name: "Heartbreak Anniversary",
-        artist: "Giveon",
-        file:"heartbreakanni.mp3",
-        image:"4.jpg",
-        download:"https://drive.google.com/uc?export=download&id=1-P2FTPFzdbTPSf5yykiC_D5T3hBxGGbH"
+        name: "CÓ CHẮC YÊU LÀ ĐÂY",
+        artist: "SƠN TÙNG M-TP",
+        file:"cochacyeuladay.mp3",
+        image:"cochacyeuladay.jpg",
+        download:"https://drive.google.com/uc?export=download&id=1RkzJiVpz1YizPU0fCF4K8_lg_RN65Y6-"
     },
     {
-        name: "1402",
-        artist: "NHÂN x HIẾU (prod. by wavytrbl)",
-        file: "1402.mp3",
-        image:"5.jpg",
-        download:"https://drive.google.com/uc?export=download&id=1Ukv0erM0n7CqKImr64Bg9qY9s0yeoBRL"
-    },
-    {
-        name: "Seasons",
-        artist: "Rival x Cadmium",
-        file: "seasons.mp3",
-        image:"6.jpg",
-        download:"https://drive.google.com/uc?export=download&id=1m10xyaszKKGS0hsGRZKhbLgPUeSHV3rN"
+        name: "HÃY TRAO CHO ANH",
+        artist: "SƠN TÙNG M-TP",
+        file: "haytraochoanh.mp3",
+        image:"haytraochoanh.jpg",
+        download:"https://drive.google.com/file/d/1tZj0QZSLi3_SaeLkVCTvrQ_5Q3jpBWn_/view?usp=share_link"
     }
 ]
 // active khi chuyen bai
