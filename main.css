@@ -18,22 +18,22 @@
 
 #nav .list> li{
     display: inline-block;
-    padding:20px 0
-}
-
-#nav .list li{
+    padding:20px 0;
     position: relative;
 }
 #nav .list> li> a{
     color: black;
-    margin: 12px;
     text-transform: uppercase;
     font-weight: 550;
     letter-spacing: 2px;
 }
+#nav .list > li:hover a{
+  background-color: black;
+  color:rgb(16, 181, 35) ;
+}
     
 #nav .list > li > a{
-    padding: 24px;
+    padding: 30px;
 }
 
 #nav .list li a{
