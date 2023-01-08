@@ -52,7 +52,7 @@ body {
   border-bottom: 1px solid #ebebeb;
   box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
   border-radius:12px ;
-
+  display: contents;
 }
 .music-thumbnail{
     width: 150px;
