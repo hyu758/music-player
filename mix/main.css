@@ -1,0 +1,215 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+:root {
+    --primary-color: #FF3366;
+    --text-color: #333;
+  }
+.download{
+  text-decoration: none;
+  color: black;
+  margin-top:6px;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+body {
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  padding:20px;
+}
+.status{
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #FF3366;
+  font-weight: 600;
+  
+}
+.music{
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 16px 14px;
+  background-color: #fff;
+  top: 20px;
+  width: 100%;
+  max-width: 480px;
+  border-bottom: 1px solid #ebebeb;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border-radius:12px ;
+
+}
+.music-thumbnail{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+.music-thumbnail img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.music-name{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+.singer-name{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+.time{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #999;
+}
+.player-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 20px;
+    font-size: 20px;
+}
+.play-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 255, 145);
+    font-size: 24px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+}
+.play-back{
+    cursor: pointer;
+}
+.play-foward{
+    cursor: pointer;
+}
+/* Custom input tham khao tren css-tricks */
+.range{
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+.range::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: #eee;
+}
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: aqua;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-top: -4px;
+  }
+.range{
+    margin-bottom: 30px;
+}
+.play-random{
+    cursor: pointer;
+}
+.play-repeat{
+    cursor: pointer;
+}
+.play-random.active{
+    color: red;
+}
+.play-repeat.active{
+    color: red;
+}
+.playlist {
+    margin-top: 40px;
+    padding: 12px;
+    display: none;
+}
+.playlist.open{
+  display: block;
+}
+.list.active{
+  color: red;
+}
+  
+  .muzik {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+  }
+  
+  .muzik.active {
+    background-color: var(--primary-color);
+  }
+  
+  .muzik:active {
+    opacity: 0.8;
+  }
+  
+  .muzik.active .option,
+  .muzik.active .author,
+  .muzik.active .title {
+    color: #fff;
+  }
+  
+  .muzik .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 8px;
+  }
+  
+  .muzik .body {
+    flex: 1;
+    padding: 0 16px;
+  }
+  
+  .muzik .title {
+    font-size: 18px;
+    color: var(--text-color);
+  }
+  
+  .muzik .artist {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .muzik .option {
+    padding: 16px 8px;
+    color: #999;
+    font-size: 18px;
+  }
+.list {
+  cursor: pointer;
+}

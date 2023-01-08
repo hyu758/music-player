@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nghe nhac thi vao dayyy</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./assets/img/icon.png"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="music">
+            <p class="status">Now Playing:</p>
+        <div class="music-thumbnail">
+            <img src="./assets/img/miku.jpg" alt="">
+        </div>
+        <h3 class="music-name">I.F.L.Y</h3>
+        <h2 class="singer-name">Bazzi</h2>
+        <input type="range" name="range" id="range" class="range">
+        <audio src="./assets/music/I Do.mp3" id ="song"></audio>
+    <div class="time">
+        <div class="remaining">0:00</div>
+        <div class="duration">1:00</div>
+    </div>
+    <div class="player-control">
+        <a href="" class="download"><ion-icon name="download"></ion-icon></a>
+        <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+        <ion-icon name="play-back-outline" class="play-back"></ion-icon>
+        <div class="play-btn">
+            <ion-icon name="play-outline" class="play-icon"></ion-icon>
+        </div>
+        <ion-icon name="play-forward-outline" class="play-foward"></ion-icon>
+        <ion-icon name="shuffle-outline" class="play-random"></ion-icon>
+        <ion-icon name="list-outline" class="list"></ion-icon>
+    </div>
+    <div class="playlist">
+
+    </div>
+    </div>
+    
+    <script async src="./main.js"></script>
+</body>
+
+</html>
