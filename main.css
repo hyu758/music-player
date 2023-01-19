@@ -52,9 +52,6 @@
     justify-content: center;
     margin-bottom: 80px;
 }
-.content{
-    
-}
 .content .artist-list{
     display: flex;
     margin-left: -29px;
@@ -102,4 +99,125 @@
 .row{
   margin-left: 30px;
   width: 50%;
+}
+
+.feedback{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-container{
+    background-color: white;
+    width: 750px;
+    min-height: 200px;
+    position: relative;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0.8;
+    padding: 10px;
+    cursor: pointer;
+}
+.close:hover{
+    background-color: red;
+}
+.feedback-body{
+    padding: 16px;
+}
+header{
+    background-color: rgb(16, 181, 35);
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .fb{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-style: normal;
+}
+.text-center{
+    text-align: center !important;
+}
+.row1{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row1::after{
+    clear: both;
+    display: block;
+    content: "";
+}
+.mt8{
+    margin-top: 8px;
+}
+.mt16{
+    margin-top: 16px;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-half{
+    width: 50%;
+}
+.col-full{
+    width: 100%;
+}
+
+.col .Feedback-info p{
+    padding: 2px;
+}
+.row1 .Feedback-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.Feedback-info{
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+.Feedback-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+.Feedback-form{
+    font-size: 15px;
+    float: right !important;
+}
+.Feedback-form .form-control{
+    padding:10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    padding-right:0px;
+}
+.Feedback-form .form-submit-btn{
+    margin-top: 30px;
+    font-size: 15px;
+    background-color: #000;
+    color: white;
+    padding: 10px 16px;
+    float: right;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.Feedback-form .form-submit-btn:hover{
+    color: #000;
+    background-color: #ccc;
+    border: 1px solid #ccc;
 }
