@@ -78,7 +78,7 @@
 
     </div>
     <div class="feedback js-feedback">
-        <div class="feedback-container">
+        <div class="feedback-container js-feedback-container">
             <div class="close js-close">
                 <i class="ti-close"></i>
             </div>
@@ -118,15 +118,20 @@
    <script>
     const fb = document.querySelector('.js-fb')
     const feedback = document.querySelector('.js-feedback')
+    const feedbackcontainer = document.querySelector('.js-feedback-container')
     const close = document.querySelector('.js-close')
     function showFeedback() {
         feedback.classList.add('open')
     }
     function removeFeedback() {
-        feedback.classList.remove('open')
+        feedback.classList.remove("open")
     }
     fb.addEventListener('click', showFeedback)
     close.addEventListener('click', removeFeedback)
+    feedback.addEventListener('click', removeFeedback)
+    feedbackcontainer.addEventListener('click', function (event){
+        event.stopPropagation
+    })
    </script>
 </body>
 </html>

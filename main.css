@@ -107,17 +107,20 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.3);
-    display: flex;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
     align-items: center;
     justify-content: center;
 }
-
+.open{
+    display: flex !important;
+}
 .feedback-container{
     background-color: white;
     width: 750px;
     min-height: 200px;
     position: relative;
+    animation: FadeIn ease .7s;
 }
 .close{
     position: absolute;
@@ -148,9 +151,7 @@ header .fb{
     font-size: 25px;
     font-style: normal;
 }
-.text-center{
-    text-align: center !important;
-}
+
 .row1{
     margin-left: -8px;
     margin-right: -8px;
@@ -220,4 +221,15 @@ header .fb{
     color: #000;
     background-color: #ccc;
     border: 1px solid #ccc;
+}
+
+@keyframes FadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
