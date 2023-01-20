@@ -43,11 +43,12 @@
     line-height: 40px;
 }
 .slider{
-    width: 100%;
-    min-height: 630px;
-    background-color: bisque;
+    padding-top: 43%;
+    background-image: url('/slide/st1.jpg');
+    background-repeat: no-repeat;
+    background-position: top center; 
+    background-size: cover;
     margin-top: 78.4px;
-    line-height: 600px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -244,7 +245,6 @@ header .fb{
         transform: translateY(0);
     }
 }
-
 /* Footer */
 .footer{
     height: 200px;
