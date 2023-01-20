@@ -5,12 +5,16 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
 }
-.header{
+#header{
     position: fixed;
     width: 100%;
     height: 78.4px;
     background-color: rgb(16, 181, 35);
     top: 0;
+    overflow: hidden;
+}
+#nav{
+    display: inline-block;
 }
 #nav .list{
     display: inline-block;
@@ -27,6 +31,7 @@
     font-weight: 550;
     letter-spacing: 2px;
 }
+
 #nav .list > li:hover a{
     width: 100%;
     background-color: black;
@@ -42,8 +47,20 @@
     text-decoration: none;
     line-height: 40px;
 }
+.mobile-menu-btn{
+    float: right;
+    padding: 28px;
+}
+.mobile-menu-btn:hover{
+    background-color: black;
+    color:rgb(16, 181, 35);
+}
+.menu-icon{
+    font-size: 20px;
+    line-height: 46px;
+}
 .slider{
-    padding-top: 43%;
+    padding-top: 50%;
     background-image: url('/slide/st1.jpg');
     background-repeat: no-repeat;
     background-position: top center; 

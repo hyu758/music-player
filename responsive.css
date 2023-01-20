@@ -1,0 +1,8 @@
+@media (max-width: 740px){
+    #nav .list{
+        display: block;
+    }
+    #nav .list> li{
+        display: block;
+    }
+}

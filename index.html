@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="/font/themify-icons/themify-icons.css">
     <link rel="icon" href="icon.png">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -12,20 +13,23 @@
     <title>Home Page</title>
 </head>
 <body>
-    <div class="header">
+    <div id="header">
         <div id="nav">
             <div class="nav-list btn">
-                <div class="list">
+                <ul class="list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#playlist">Playlist</a></li>
                     <li><a href="#contact">Contributors</a></li>
                     <li><a class="js-fb" href="#">Feedback</a></li>
-                </div>
+                </ul>
             </div>
+        </div>
+        <div id="mobile-menu" class="mobile-menu-btn">
+            <i class="menu-icon ti-menu"></i>
         </div>
     </div>
     <div class="slider">
-        <!-- <h1 class="context">ENJOYING THE DAY!</h1> -->
+
     </div>
     <div id="playlist" class="content">
         <div class="playlist-name">
@@ -148,6 +152,31 @@
     feedbackcontainer.addEventListener('click', function (event){
         event.stopPropagation
     })
+   </script>
+
+   <script>
+    var header = document.getElementById('header');
+    var mobileMenu = document.getElementById('mobile-menu');
+    var headerHeight = header.clientHeight;
+    // đóng mở mobile menu
+    mobileMenu.onclick = function(){
+        var isClose = header.clientHeight === headerHeight;
+        if(isClose){
+            header.style.height = 'auto';
+        }
+        else{
+            header.style.height = null;
+        }
+    }
+    // đóng khi chọn menu
+    var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+    console.log(menuItems);
+    for(var i = 0; i < menuItems.length; i++){
+        var menuItem = menuItems[i];
+        menuItem.onclick = function(){
+            header.style.height = null;
+        }
+    }
    </script>
 </body>
 </html>
