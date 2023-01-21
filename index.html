@@ -46,7 +46,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="artist-item 2">
+                <div class="artist-item sb">
                     
                     <img src="./assets/img/soobin.jpg" alt="">
                     <p class="artist-name">Soobin</p>
@@ -111,7 +111,7 @@
                             <p><i class="ti-mobile"></i>Phone: +84 899 140 137</p>
                             <p><i class="ti-email"></i>Email: nxgiap04@gmail.com</p>
                         </div>
-                        <div class="col col-half Feedback-form">
+                        <div class="col col-half1 Feedback-form">
                             <form action="">
                                 <div class="row1">
                                     <div class="col col-half">
@@ -138,7 +138,7 @@
    <script>
     const fb = document.querySelector('.js-fb')
     const feedback = document.querySelector('.js-feedback')
-    const feedbackcontainer = document.querySelector('.js-feedback-container')
+    const feedbackContainer = document.querySelector('.js-feedback-container')
     const close = document.querySelector('.js-close')
     function showFeedback() {
         feedback.classList.add('open')
@@ -149,8 +149,8 @@
     fb.addEventListener('click', showFeedback)
     close.addEventListener('click', removeFeedback)
     feedback.addEventListener('click', removeFeedback)
-    feedbackcontainer.addEventListener('click', function (event){
-        event.stopPropagation
+    feedbackContainer.addEventListener('click', function (event){
+        event.stopPropagation()
     })
    </script>
 

@@ -5,4 +5,49 @@
     #nav .list> li{
         display: block;
     }
+    .content .artist-list {
+        display: block;
+    }
+    .content .artist-item{
+        width: 200%;
+    }
+    .artist-list .row{
+        padding-left: 50px;
+    }
+    .artist-item .artist-name{
+        display: block;
+        padding-left: 10px;
+    }
+    p.artist-name {
+        margin-left: 0px !important;
+    
+    }
+    .footer-info{
+        font-size: 10px;
+    }
+    .footer-head{
+        font-size: 14px;
+    }
+    .footer{
+        height: 185px;
+    }
+    .footer-sticker{
+        font-size: 20px;
+    }
+    .feedback-container{
+        width: 395px;
+        border-radius: 15px;
+    }
+    header{
+        border-radius: 15px 15px 0px 0px;
+    }
+    .col-half1{
+        width: 100%;
+    }
+    .Feedback-form {
+        margin-top: 15px;
+    }
+    .Feedback-info{
+        margin-top: 0px;
+    }
 }

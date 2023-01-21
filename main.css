@@ -84,6 +84,7 @@
 }
 .content .artist-list{
     display: flex;
+    margin-bottom: 20px;
 }
 .content .artist-item{
     display: flex;
@@ -204,12 +205,18 @@ header .fb{
 .col-half{
     width: 50%;
 }
+.col-half1{
+    width: 50%;
+}
 .col-full{
     width: 100%;
 }
 
 .col .Feedback-info p{
     padding: 2px;
+}
+.col .Feedback-info{
+    margin-top: 14px;
 }
 .row1 .Feedback-section{
     display: flex;
