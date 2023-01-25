@@ -1,10 +1,10 @@
 @media (max-width: 740px){
     .mobile-menu-btn{
         float: right;
-        padding: 16.5px 30px;
+        padding: 16.5px 30px !important;
     }
     .menu-icon{
-        font-size: 15px;
+        font-size: 15px !important;
     }
     .mobile-menu-btn:hover{
         background-color: black;
