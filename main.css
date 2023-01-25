@@ -51,10 +51,6 @@
     float: right;
     padding: 28px;
 }
-.mobile-menu-btn:hover{
-    background-color: black;
-    color:rgb(16, 181, 35);
-}
 .menu-icon{
     font-size: 20px;
     line-height: 46px;

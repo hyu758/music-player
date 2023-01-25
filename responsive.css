@@ -1,4 +1,12 @@
 @media (max-width: 740px){
+    .mobile-menu-btn{
+        float: right;
+        padding: 28px;
+    }
+    .mobile-menu-btn:hover{
+        background-color: black;
+        color:rgb(16, 181, 35);
+    }
     #nav .list{
         display: block;
     }
@@ -70,5 +78,10 @@
     
     .ctb-item .contact-icon{
         margin-top: 17px;
+    }
+}
+@media (min-width: 740px){
+    .ti-menu{
+        color:rgb(16, 181, 35);
     }
 }
