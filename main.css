@@ -374,6 +374,9 @@ header .contributors{
     font-size: 17px;
     line-height: 1.4;
 }
+.ctb-contact a{
+    color: black;
+}
 .contact-icon a{
     margin-right: 20px;
 }
