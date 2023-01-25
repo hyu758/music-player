@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="/font/themify-icons/themify-icons.css">
-    <link rel="icon" href="icon.png">
+    <link rel="icon" href="/img/huy.png">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <title>Home Page</title>
@@ -19,7 +19,7 @@
                 <ul class="list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#playlist">Playlist</a></li>
-                    <li><a href="#contact">Contributors</a></li>
+                    <li><a class="js-contb" href="#">Contributors</a></li>
                     <li><a class="js-fb" href="#">Feedback</a></li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <div class="artist-item sb">
-                    
+
                     <img src="./assets/img/soobin.jpg" alt="">
                     <p class="artist-name">Soobin</p>
                     <a href="./soobin/index.html" target="_blank">
@@ -81,6 +81,7 @@
             </div>
         </div>
     </div>
+
     <div class="footer">
         <div class="footer-item">
             <div class="footer-head">
@@ -97,6 +98,7 @@
             </div>
         </div>
     </div>
+
     <div class="feedback js-feedback">
         <div class="feedback-container js-feedback-container">
             <div class="close js-close">
@@ -135,11 +137,75 @@
         </div>
     </div>
 
+    <div class="ctb js-ctb">
+        <div class="ctb-container js-ctb-container">
+            <div class="ctb-close js-ctb-close">
+                <i class="ti-close"></i>
+            </div>
+            <header>
+                <i class="contributors">Contributors</i>
+            </header>
+            <div class="ctb-body">
+                <div class="ctb-item ">
+                    <div class="ctb-image">
+                        <img src="/img/giap.jpg" alt="Giáp">
+                    </div>
+                    <div class="ctb-name">
+                        <p class="name">Nguyen Xuan Giap</p>
+                        <p class="introduction">
+                            <li>Live: Nghe An</li>
+                            <li>Majors: Information technology</li>
+                            <li>Class: TT35-CL04</li>
+                        </p>
+                    </div>
+                    <div class="ctb-contact">
+                        <div class="contact-icon">
+                            <a style="text-decoration: none" href="https://www.facebook.com/xngip">
+                                <i class="ti-facebook"></i>
+                            </a>
+                            <a style="text-decoration: none" href="https://www.instagram.com/xngip_/">
+                                <i class="ti-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctb-item ">
+                    <div class="ctb-image">
+                        <img src="/img/huy.png" alt="Huy">
+                    </div>
+                    <div class="ctb-name">
+                        <p class="name">Nguyen Gia Huy</p>
+                        <p class="introduction">
+                            <li>Live: Ha Noi</li>
+                            <li>Majors: Information technology</li>
+                            <li>Class: TT35-CL02</li>
+                        </p>
+                    </div>
+                    <div class="ctb-contact">
+                        <div class="contact-icon">
+                            <a style="text-decoration: none" href="https://www.facebook.com/nggiahii">
+                                <i class="ti-facebook"></i>
+                            </a>
+                            <a style="text-decoration: none" href="">
+                                <i class="ti-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- hiện feedback  -->
    <script>
     const fb = document.querySelector('.js-fb')
     const feedback = document.querySelector('.js-feedback')
     const feedbackContainer = document.querySelector('.js-feedback-container')
     const close = document.querySelector('.js-close')
+
     function showFeedback() {
         feedback.classList.add('open')
     }
@@ -149,11 +215,13 @@
     fb.addEventListener('click', showFeedback)
     close.addEventListener('click', removeFeedback)
     feedback.addEventListener('click', removeFeedback)
+
     feedbackContainer.addEventListener('click', function (event){
         event.stopPropagation()
     })
    </script>
 
+   <!-- đóng mở bảng menu khi ở dạng điện thoại -->
    <script>
     var header = document.getElementById('header');
     var mobileMenu = document.getElementById('mobile-menu');
@@ -177,6 +245,29 @@
             header.style.height = null;
         }
     }
+   </script>
+
+   <!-- hiện bảng contributors -->
+   <script>
+    const ctb = document.querySelector('.js-ctb')
+    const ctbClose = document.querySelector('.js-ctb-close')
+    const contb = document.querySelector('.js-contb')
+    const ctbContainer = document.querySelector('.js-ctb-container')
+
+    function showCtb(){
+        ctb.classList.add('open')
+    }
+    function removeCtb(){
+        ctb.classList.remove('open')
+    }
+
+    contb.addEventListener('click' , showCtb)
+    ctbClose.addEventListener('click' , removeCtb)
+    ctb.addEventListener('click' , removeCtb)
+
+    ctbContainer.addEventListener('click' , function (event){
+        event.stopPropagation()
+    })
    </script>
 </body>
 </html>

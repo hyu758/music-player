@@ -35,7 +35,7 @@
         font-size: 20px;
     }
     .feedback-container{
-        width: 395px;
+        width: 360px;
         border-radius: 15px;
     }
     header{
@@ -49,5 +49,26 @@
     }
     .Feedback-info{
         margin-top: 0px;
+    }
+    /* Contributors mobile */
+    .ctb-container{
+        width: 360px;
+        border-radius: 15px;
+    }
+    .ctb-body .ctb-item {
+        margin: 7px;
+        height: 350px;
+    }
+    .ctb-name .name{
+        font-weight: 550 !important;
+        font-size: 16px !important;
+        padding-bottom: 10px !important;
+    }
+    .ctb-item li{
+        font-size: 14px;
+    }
+    
+    .ctb-item .contact-icon{
+        margin-top: 17px;
     }
 }
