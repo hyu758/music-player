@@ -57,7 +57,7 @@
 }
 .slider{
     padding-top: 50%;
-    background-image: url('/img/st1.jpg');
+    background-image: url('assets/img/st1.jpg');
     background-repeat: no-repeat;
     background-position: top center; 
     background-size: cover;
