@@ -213,3 +213,7 @@ body {
 .list {
   cursor: pointer;
 }
+.homePage{
+  position: absolute;
+  font-size: 20px;
+}

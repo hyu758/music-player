@@ -24,6 +24,13 @@ let isRandom=false;
 // List nhac
 const musics=[
     {
+        name: "tình yêu chậm trễ",
+        artist: "MONSTAR",
+        file:"tinhyeuchamtre.mp3",
+        image:"tinhyeuchamtre.jpg",
+        download:"https://drive.google.com/uc?export=download&id=18XRrG58aJNK2fshVWS-xvLS6W80gi7W1"
+    },
+    {
         name: "Tháng Năm",
         artist: "Soobin",
         file:"thangnam.mp3",
